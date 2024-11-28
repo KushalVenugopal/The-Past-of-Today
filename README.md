@@ -7,3 +7,8 @@ The main aim of this project was for us to understand the design process of a we
 Prior to development of the code seen here, a whole UI and UX design process was undertaken.
 
 This consisted of Research, Prototyping, Wireframing, User Testing and Validation in mulitple stages.
+
+The code uses the following stack:
+- HTML
+- CSS
+- Vanilla JavaScript
