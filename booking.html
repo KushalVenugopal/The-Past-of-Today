@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>The Past of Today - Plan My Trip</title>
+</head>
+<body id="booking-body">
+
+    <header class="other-pages-header">
+        <nav class="other-pages-nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="booking.html">Booking Status</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="goto-from-other-pages">
+            <ul>
+                <li>
+                    <a href="era.html">Era</a>
+                </li>
+                <li>
+                    <a href="characters.html">Characters</a>
+                </li>
+                <li>
+                    <a href="activities.html">Activities</a>
+                </li>
+                <li>
+                    <a href="others-expereinces.html">Others' Experiences</a>
+                </li>
+                <li>
+                    <a href="plan-my-trip.html">My Trip Plan</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="booking-msg">
+        <p>
+            Please fill further details below, and proceed to book your adventure!
+        </p>
+    </section>
+
+    <section id="days-and-people">
+        <form>
+            <fieldset>
+                <legend>
+                    Further Details
+                </legend>
+
+                <section class="further-details">
+                    <fieldset id="date-to-from">
+                        <legend>
+                            Date Range of the Trip
+                        </legend>
+
+                        <section>
+                            <label for="from-date">From*:</label>
+                            <p id="please-enter-from">Please enter the date</p>
+                            <input type="date" name="from-date" id="from-date">
+                        </section>
+
+                        <section>
+                            <label for="to-date">To*:</label>
+                            <p id="please-enter-to">Please enter the date</p>
+                            <input type="date" name="to-date" id="to-date">
+                        </section>
+
+                    </fieldset>
+                </section>
+
+                <section class="further-details">
+                    <fieldset id="people-count">
+
+                        <legend>Head Count</legend>
+
+                        <section>
+                            <label for="no-of-people">No. of people*:</label>
+                            <p id="please-enter-number">Please enter the number of people</p>
+                            <input type="number" name="no-of-people" id="no-of-people" placeholder="Number of people">
+                        </section>
+
+                    </fieldset>
+                </section>
+
+            </fieldset>
+
+            <fieldset class="button-fieldset" id="first-button">
+                <button type="submit">Confirm these details</button>
+            </fieldset>
+
+        </form>
+    </section>
+
+    <section id="chosen-items-count">
+        <ul>
+            <li>No. of Eras Chosen: <span id="cent-count">0</span></li>
+
+            <li>No. of Characters Chosen: <span id="char-count">0</span></li>
+
+            <li>No. of Activities Chosen: <span id="act-count">0</span></li>
+
+            <li>No. of People: <span id="people-count-span">0</span></li>
+
+            <li>No. of Days: <span id="days-count-span">0</span></li>
+        </ul>
+    </section>
+
+    <section id="prices-header">
+        <p>
+            Breakdown of the prices is as follows:
+        </p>
+    </section>
+
+    <section id="prices">
+        <ul>
+            <li>
+                Eras: <span id="num-of-eras">0</span> * AUD$500 each = <span id="era-total">0</span>
+            </li>
+            <li>
+                Characters: <span id="num-of-chars">0</span> * AUD$200 each = <span id="char-total">0</span>
+            </li>
+            <li>
+                Activities: <span id="num-of-acts">0</span> * AUD$100 each = <span id="acts-total">0</span>
+            </li>
+            <li>
+                Price of the experience  = Eras price + Characters price + Actvities price = <span id="experience-total">0</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="total-price">
+        <p>
+            <span>Total Price</span> (Experience Price * No. of days selected * No. of people selected) + (10% Taxes): <span id="total-price-span">0</span>
+        </p>
+    </section>
+
+    <section id="confirmation-form">
+        <form>
+            <fieldset id="your-details">
+                <legend>
+                    Your Details:
+                </legend>
+                <p id="confirmation-msg">Please fill your details in, to proceed:</p>
+
+                <section class="each-form-field">
+                    <label for="user-name">Name:</label>
+                    <input type="text" name="user-name" id="user-name" placeholder="Enter name here">
+                </section>
+
+                <section class="each-form-field">
+                    <label for="user-email">Email*:</label>
+                    <p id="please-enter-email">Please enter your email</p>
+                    <input type="email" name="user-email" id="user-email" placeholder="Input your email here">
+                </section>
+            </fieldset>
+
+            <section id="final-message-box">
+
+                <fieldset class="button-fieldset">
+                    <button type="submit">Confirm Booking</button>
+                </fieldset>
+                
+                <p id="final-message">Thank you for choosing to go on this adventure, <span id="cust-name">Customer</span>! An invoice with links to payment methods will be sent to <span id="cust-email">your Email ID</span>.</p>
+
+            </section>
+        </form>
+    </section>
+
+    <footer>
+        <section class="enquiry-msg">
+            <p><span>For further enquiries, contact:</span> thepast@email.com</p>
+            <p><span>Also, do get in touch with us on social media:</span></p>
+        </section>
+
+        <section class="social-media">
+
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook-button.png" alt="facebook button">
+            </a>
+
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram-button.png" alt="instagram button">
+            </a>
+
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter-button.png" alt="twitter button">
+            </a>
+
+        </section>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

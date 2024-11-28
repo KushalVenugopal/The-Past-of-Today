@@ -1,0 +1,2060 @@
+/* Removing default browser sytling */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Homepage body styling */
+body{
+    font-family: 'Merienda', 'sans-serif';
+    background-image: url("../images/castle-desktop.jpg");
+    background-size: cover;
+    background-position: left;
+}
+
+/* Footer styling */
+footer{
+    background-color: rgb(52,160,164, 0.5);
+    box-shadow: -2px -2px 0.5em black;
+    margin-top: 30vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p{
+    margin: 1em;
+    font-size: 1.3em;
+    color: black;
+}
+
+footer p span{
+    border-bottom: 2px solid #80b918;
+}
+
+.enquiry-msg{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+/* Styling and arranging the social media buttons in the footer */
+.social-media{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media a{
+    width: 20%;
+}
+
+.social-media img{
+    width: 100%;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.social-media img:hover{
+    transform: scale(1.2);
+}
+
+.social-media img:active{
+    transform: scale(0.8);
+}
+
+/* Homepage header styling */
+header h1{
+   font-size: 45px;
+}
+
+header h4{
+    font-size: 1.2em;
+}
+
+header > h1, h4{
+    color: #012a4a;
+    text-align: center;
+    margin: 0.2em;
+    text-shadow: 2px 2px #469d89;
+}
+
+header li{
+    display: inline-block;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+header li > a:link{
+    text-decoration: none;
+}
+
+header li > a:visited{
+    color: black;
+}
+
+header li > a:hover{
+    color: #2a6f97;
+    border-radius: 10%;
+    box-shadow: 2px 2px, -2px -2px;
+}
+
+header li > a:active{
+    color: #2a6f97;
+    border-radius: 20%;
+    box-shadow: inset 2px 2px, inset -2px -2px;
+}
+
+/* Styling the top navigation bar in the homepage */
+#main-nav{
+    text-align: left;
+    margin-top: 2em;
+    display: block;
+    box-shadow: 0px 13px 2em #52b788, 0px -13px 2em #52b788;
+}
+
+#main-nav a{
+    color: black;
+}
+
+/* Block containing the welcome message */
+#block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-msg{
+    margin-top: 1em;
+    width: 60%;
+    margin-bottom: 2em;
+    text-align: center;
+    position: relative;
+    transition: all ease;
+    animation-name: opac;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#welcome-msg h2{
+    opacity: 0.65;
+    font-size: 2em;
+}
+
+#welcome-msg > p:last-of-type{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 0;
+    animation-name: opac;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(.8,.42,.54,.8);
+    animation-delay: 1s;
+    animation-direction: alternate;
+    transition: all 1s ease;
+}
+
+#welcome-msg > p:last-of-type:hover{
+    opacity: 0.7;
+}
+
+#welcome-msg img{
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    animation-name: feather;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+    
+}
+
+/* Animation to change opacity of the welcome message */
+@keyframes opac{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0.25;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Animation to move the feather over the welcome message */
+@keyframes feather{
+    0%{
+        left: 0%;
+        top: 0%;
+    }
+
+    10%{
+        left: 40%;
+        top: 0%;        
+    }
+
+    20%{
+        left: 0%;
+        top: 40%;        
+    }
+
+    30%{
+        left: 80%;
+        top: 0%;        
+    }
+
+    40%{
+        left: 0%;
+        top: 80%;
+    }
+
+    50%{
+        left: 100%;
+        top: 0%;
+    }
+
+    60%{
+        left: 0%;
+        top: 100%;
+    }
+
+    70%{
+        left: 100%;
+        top: 40%;
+    }
+
+    80%{
+        left: 40%;
+        top: 100%;
+    }
+
+    90%{
+        left: 100%;
+        top: 80%;
+    }
+
+    100%{
+        left: 80%;
+        top: 100%;
+    }
+
+
+}
+
+/* The links in the home page, to all the other main pages */
+#main-pages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#main-pages a{
+    width: 70vw;
+    height: 15vh;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(135deg, rgba(82, 200, 136, 0.7) 25%, transparent 35%, transparent 65%, rgba(82, 200, 136, 0.7) 75%);
+    border-radius: 20%;
+    transition: all 0.5s ease;
+}
+
+#main-pages a:hover{
+    transform: scale(1.15);
+}
+
+#main-pages a:active{
+    transform: scale(0.8);
+}
+
+
+/* Top Navigation in all of the pages, except home page */
+.other-pages-header{
+    display: flex;
+    flex-direction: column;
+}
+.other-pages-nav a{
+    color: black;
+}
+
+.other-pages-nav{
+    text-align: left;
+    margin-top: 2em;
+    box-shadow: 0px 1px 1em #036666, 0px -1px 1em #036666;
+}
+
+.other-pages-nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.other-pages-nav ul li{
+    border-right: 2px solid black;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.other-pages-nav ul li:last-of-type{
+    border: 0;
+}
+
+.goto-from-other-pages{
+    width: 80%;
+    border-radius: 20px;
+    align-self: center;
+    text-align: center;
+    margin-top: 2em;
+    box-shadow: 0px 1px 2em #036666, 0px -1px 2em #036666;
+}
+
+.goto-from-other-pages li{
+    border-right: 2px solid black;
+    padding-right: 1em;
+    margin: 0.2em;
+}
+
+.goto-from-other-pages a{
+    color: black;
+}
+
+.goto-from-other-pages > ul > li:last-of-type{
+    border: none;
+}
+
+.goto-from-other-pages li > a:link{
+    text-decoration: none;
+}
+
+.goto-from-other-pages li > a:visited{
+    color: black;
+}
+
+.goto-from-other-pages li > a:hover{
+    color: #2a6f97;
+    border-radius: 10%;
+    box-shadow: 2px 2px, -2px -2px;
+}
+
+.goto-from-other-pages li > a:active{
+    color: #2a6f97;
+    border-radius: 20%;
+    box-shadow: inset 2px 2px, inset -2px -2px;
+}
+
+
+/* Era.html page styling*/
+#era-body{
+    background-image: linear-gradient(135deg, #74c69d 35%, #b7e4c7 45%, #b7e4c7 55%, #34a0a4 65%);
+}
+
+#era-msg{
+    margin: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    background-image: linear-gradient(45deg, #34a0a4 25%, #76c893 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+#all-eras img{
+    position: absolute;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+#all-eras{
+    margin: 1em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 1em black;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#all-eras a{
+    height: 27%;
+    margin: 1em;
+    padding: 0.3em;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(100, 160, 164, 0.6);
+    box-shadow: 5px 5px 10px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+#all-eras a:first-child{
+    background-color: rgba(52, 160, 164, 0.6);
+}
+
+#all-eras a:nth-child(3){
+    background-color: rgb(82, 182, 154, 0.6);
+}
+
+#all-eras a:link{
+    text-decoration: none;
+    color: black;
+}
+
+#all-eras a:hover{
+    background-color: transparent;
+
+}
+
+#all-eras a:visited{
+    color: black;
+
+}
+
+#all-eras a:active{
+    transform: scale(0.8);
+}
+
+/* Details of each era that pop-up on click */
+#century-header{
+    margin: 1em;
+}
+
+#century-header h2{
+    color: #adb5bd;
+    text-shadow: 1px 1px #ced4da;
+    font-size: 2em;
+}
+
+.century-body{
+    background-image: linear-gradient(45deg, #212529 35%, #495057 45%, #495057 55%, #212529 65%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.century-body ul{
+    height: 50%;
+    padding: 2em;
+    display: block;
+}
+
+.century-body ul li{
+    height: 35%;
+    color: #ced4da;
+    font-size: 1.2em;
+}
+
+.century-body a{
+    text-decoration: none;
+    text-align: center;
+    color: #40916c;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em;
+    padding: 0.5em;
+    width: 60%;
+    background: transparent;
+    border: 5px solid #2c6b4f;
+    transition: all 0.5s ease;
+}
+
+.century-body a:hover{
+    transform: scale(1.1);
+}
+
+.century-body a:active{
+    transform: scale(0.9);
+}
+
+/* Javascript used to pop up each of the pages which are linked as iframes */
+#century-10-deets{
+    display: none;
+    transform: scale(0);
+}
+
+#century-10-deets.show{
+    display: inline;
+    transform: scale(1);
+    align-self: center;
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    width: 80vw;
+    height: 90vh;    
+}
+
+#century-12-deets{
+    display: none;
+    transform: scale(0);
+}
+
+#century-12-deets.show{
+    align-self: center;
+    transform: scale(1);
+    display: inline;
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    width: 80vw;
+    height: 90vh;
+}
+
+#century-15-deets{
+    transform: scale(0);
+    display: none;
+}
+
+#century-15-deets.show{
+    align-self: center;
+    transform: scale(1);
+    display: inline;
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    width: 80vw;
+    height: 90vh;
+}
+
+.century-body.js #century-header{
+    margin: 1.5em;
+}
+
+.century-body.js #century-header h2{
+    font-size: 1.3em;
+}
+
+.century-body.js ul li{
+    font-size: 1em;
+}
+
+.century-body.js a{
+    height: 1em;
+    width: 70%;
+    cursor: pointer;
+}
+
+#all-eras iframe{
+    border-radius: 30px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 1em black;
+}
+
+
+/* Characters.html page styling */
+#characters-body{
+    background-image: linear-gradient(165deg, #95d5b2 25%, #248277 45%, #248277 55%, #95d5b2 65%);
+    
+}
+
+#char-header{
+    display: flex;
+    flex-direction: column;
+}
+
+#goto-from-char{
+    width: 80%;
+    align-self: center;
+    text-align: center;
+    margin-top: 2em;
+    box-shadow: 0px 1px 2em #036666, 0px -1px 2em #036666;
+}
+
+#goto-from-char li{
+    border-right: 2px solid black;
+    
+    padding-right: 1em;
+    margin: 0.2em;
+}
+
+#goto-from-char > ul > li:last-of-type{
+    border: none;
+}
+
+#goto-from-char li > a:link{
+    text-decoration: none;
+}
+
+#goto-from-char li > a:visited{
+    color: black;
+}
+
+#goto-from-char li > a:hover{
+    color: #304e70;
+    border-radius: 10%;
+    box-shadow: 2px 2px, -2px -2px;
+}
+
+#goto-from-char li > a:active{
+    color: #2a6f97;
+    border-radius: 20%;
+    box-shadow: inset 2px 2px, inset -2px -2px;
+}
+
+#char-nav{
+    text-align: left;
+    margin-top: 2em;
+    box-shadow: 0px 10px 2em #036666, 0px -10px 2em #036666;
+}
+
+#char-msg{
+    margin: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    background-image: linear-gradient(45deg, #34a0a4 25%, #76c893 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+#all-characters{
+    margin-top: 1.3em;
+    margin-bottom: 2em;
+    height: 100vh;
+    position: relative;
+}
+
+#all-characters a{
+    text-shadow: 2px 0em black;
+    position: absolute;
+    margin-top: 10%;
+    padding-top: 5%;
+    height: 25%;
+    width: 70%;
+    right: 14.5%;
+    text-decoration: none;
+    border-radius: 15%;
+    display: flex;
+    box-shadow: 0px -5px 1em #001219;
+    transition: all 0.5s ease;
+}
+
+#king{
+    justify-content: right;
+    background-image: url("../images/king-queen-cut.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#king:hover{
+    transform: translateY(-33%);
+}
+
+#assassin{
+    top: 15%;
+    justify-content: left;
+    background-image: url("../images/assassin-cut.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#assassin:hover{
+    transform: translateY(-33%);
+}
+
+#knight{
+    top: 30%;
+    justify-content: right;
+    background-image: url("../images/knight-cut.jpg");
+    background-size: cover;
+    color: white;
+    
+}
+
+#knight:hover{
+    transform: translateY(-33%);
+}
+
+#priest{
+    top: 45%;
+    justify-content: left;
+    background-image: url("../images/wizard-5680920_1920.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#priest:hover{
+    transform: translateY(-33%);
+}
+
+#stable{
+    top: 60%;
+    justify-content: right;
+    background-image: url("../images/stable.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#stable:hover{
+    transform: translateY(-33%);
+}
+
+/* Activities.html page styling */
+#activities-body{
+    background-image: linear-gradient(165deg, #95d5b2 25%, #248277 45%, #248277 55%, #95d5b2 65%);
+}
+
+#act-msg{
+    margin: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    background-image: linear-gradient(45deg, #76c893 25%, #34a0a4 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+#all-activities{
+    margin: 2em;
+    border-radius: 20px;
+    height: 150vh;
+    position: relative;
+    box-shadow: 10px 10px 1em black;
+}
+
+#all-activities img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+#all-activities a{
+    text-shadow: 2px 0em black;
+    position: absolute;
+    margin-top: 10%;
+    padding-top: 5%;
+    height: 15%;
+    width: 70%;
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 0px -5px 0.5em #212529;
+    transition: all 0.5s ease;
+}
+
+#royal-relax{
+    left: 5%;
+    background-image: url("../images/royal-dinner.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#royal-relax:hover{
+    transform: translateY(-33%);
+}
+
+#treasure-hunt{
+    top: 13%;
+    right: 5%;
+    justify-content: right;
+    background-image: url("../images/treasure-hunt-equipment.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#treasure-hunt:hover{
+    transform: translateY(-33%);
+}
+
+#wildlife-hunt{
+    top: 26%;
+    left: 5%;
+    justify-content: right;
+    background-image: url("../images/boar-hunt.jpg");
+    background-size: cover;
+    background-position: right;
+    color: white;
+}
+
+#wildlife-hunt:hover{
+    transform: translateY(-33%);
+}
+
+#jousting{
+    top: 39%;
+    right: 5%;
+    justify-content: right;
+    background-image: url("../images/jousting.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#jousting:hover{
+    transform: translateY(-33%);
+}
+
+#chariot-racing{
+    top: 52%;
+    left: 5%;
+    justify-content: right;
+    background-image: url("../images/chariot-race.jpg");
+    background-size: cover;
+    color: black;
+}
+
+#chariot-racing:hover{
+    transform: translateY(-33%);
+}
+
+#assistance{
+    top: 65%;
+    right: 5%;
+    justify-content: center;
+    background-image: url("../images/helping-hand.jpg");
+    background-size: cover;
+    color: white;
+    align-items: flex-end;
+}
+
+#assistance:hover{
+    transform: translateY(-33%);
+}
+
+/* Others' Experiences.html page styling */
+#others-exp-body{
+    background-image: linear-gradient(135deg, #74c69d 35%, #b7e4c7 45%, #b7e4c7 55%, #34a0a4 65%);
+}
+
+#others-experiences h2{
+    margin: 1em;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+#others-experiences{
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    margin: 1em;
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+.review p:first-of-type{
+    height: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+#others-experiences p{
+    padding: 1em;
+}
+
+/* Plan My Trip.html page styling */
+#plan-my-trip-body{
+    background-image: linear-gradient(135deg, #74c69d 35%, #b7e4c7 45%, #b7e4c7 55%, #34a0a4 65%);
+}
+
+#main-plan-selections{
+    
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selected-items{
+    
+    width: 100%;
+    margin: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.selected-items p{
+    border-bottom: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    font-size: 2em;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0.5em black;
+    background-image: linear-gradient(135deg, #05668d 25%, #00b4d8 65%);
+}
+
+.selected-items ul{
+    margin: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selected-items ul div{
+    background-image: linear-gradient(135deg, #52b69a 25%, #34a0a4 65%);
+    border-radius: 20px;
+    margin: 1em;
+    width: 100%;
+    box-shadow: 5px 5px 0.5em black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-items ul li{
+    list-style: none;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.selected-items a{
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin: 0.5em;
+    height: 5vh;
+    width: 50%;
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    box-shadow: 5px 5px 0.5em black;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.selected-items a:hover{
+    transform: scale(1.1);
+}
+
+.selected-items a:active{
+    transform: scale(0.9);
+}
+
+#plan-my-trip-body.js .selected-items a{
+    cursor: pointer;
+}
+
+#book{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 1em;
+    height: 5vh;
+    width: 100vw;
+    padding: 1em;
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0.5em black;
+    font-weight: bold;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#book:hover{
+    transform: scale(1.05);
+}
+
+#book:active{
+    transform: scale(0.9);
+}
+
+/* Plan My Trip JavaScript */
+
+#plan-my-trip-body.js .selected-items ul div{
+    display: none;
+}
+/* Showing the centuries in the trip plan when selected */
+#plan-my-trip-body.js #century-10-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #century-12-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #century-15-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+/* Showing the characters in the trip plan when selected */
+#plan-my-trip-body.js #king-or-queen-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #assassin-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #knight-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #priest-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #stable-boy-or-girl-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Showing the activities in the trip plan when selected */
+#plan-my-trip-body.js #royal-relaxation-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #treasure-hunting-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #wildlife-hunting-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #jousting-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #chariot-racing-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+#plan-my-trip-body.js #exploration-assistance-box.show{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* booking.html page styling */
+#booking-body{
+    background-image: linear-gradient(135deg, #74c69d 35%, #b7e4c7 45%, #b7e4c7 55%, #34a0a4 65%);
+    
+}
+#booking-msg{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#booking-msg p{
+    width: 70%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+    background-image: linear-gradient(45deg, #76c893 25%, #34a0a4 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+}
+
+/* Input form handling */
+#days-and-people{
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+.further-details{
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.further-details section{
+    margin: 1em;
+
+}
+
+fieldset {
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    margin: 1em;
+    padding: 1em;
+    border: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 1em black;
+}
+
+legend{
+    background-image: linear-gradient(135deg, #48bfe3 25%, #95d5b2 75%);
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+fieldset label{
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+fieldset input{
+    height: 5vh;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 2px 2px 0.5em black;
+}
+
+.button-fieldset{
+    display: flex;
+    align-items: center;
+    
+}
+
+.button-fieldset button{
+    width: 70%;
+    background-image: linear-gradient(135deg, #a4133c 25%, #ff4d6d 75%);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding: 1em;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button-fieldset button:hover{
+    transform: scale(1.2);
+}
+
+.button-fieldset button:active{
+    transform: scale(0.9);
+}
+
+#no-of-people, #from-date, #to-date{
+    text-align: center;
+    width: 90%;
+}
+
+/* From date error handling */
+#from-date.error{
+    border: 2px solid red;
+}
+
+#please-enter-from{
+    opacity: 0;
+    font-size: 0.7em;
+}
+
+#please-enter-from.error{
+    display: block;
+    opacity: 1;
+    font-size: 0.9em;
+    color: #c9184a;
+}
+
+/* To date error handling */
+#to-date.error{
+    border: 2px solid red;
+}
+
+#please-enter-to{
+    opacity: 0;
+    font-size: 0.7em;
+}
+
+#please-enter-to.error{
+    display: block;
+    opacity: 1;
+    font-size: 0.9em;
+    color: #c9184a;
+}
+
+/* No. of people error handling */
+#no-of-people.error{
+    border: 2px solid red;
+}
+
+#please-enter-number{
+    opacity: 0;
+    font-size: 0.7em;
+}
+
+#please-enter-number.error{
+    display: block;
+    opacity: 1;
+    font-size: 0.9em;
+    color: #c9184a;
+}
+
+.button-fieldset button[disabled]{
+    background-image: none;
+    background-color: grey;
+    color: black;
+    cursor: not-allowed;
+}
+
+.button-fieldset button[disabled]:hover{
+    transform: none;
+}
+
+/* Counting all the items an their costs styling*/
+#chosen-items-count{
+    display: flex;
+    justify-content: center;
+}
+
+#chosen-items-count ul{
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    border-radius: 20px;
+    margin: 2em;
+    padding: 0.5em;
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 1em black;
+}
+
+#chosen-items-count ul li{
+    list-style: none;
+    font-size: 1.3em;
+    border-bottom: 2px dashed black;
+}
+
+#chosen-items-count ul li span{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#prices-header{
+    display: flex;
+    justify-content: center;
+}
+
+#prices-header p{
+    border-radius: 20px;
+    margin-top: 1em;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #184e77;
+    color: #fff0f3;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 0.5em #081c15;
+    
+}
+
+#prices{
+    display: flex;
+    justify-content: center;
+}
+
+#prices ul{
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    border-radius: 10%;
+    margin: 1em;
+    padding: 1em;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 1em black;
+}
+
+#prices ul li{
+    list-style: none;
+    font-size: 1.2em;
+}
+
+#prices ul li:last-of-type{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+#prices ul li span:last-of-type{
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 2px dashed black;
+}
+
+#total-price{
+    display: flex;
+    justify-content: center;
+}
+
+#total-price p{
+    background-image: linear-gradient(135deg, #5390d9 25%, #48bfe3 75%);
+    margin: 1em;
+    padding: 1em;
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+    transition: all 1s ease;
+    border-radius: 20%;
+    box-shadow: 5px 5px 0.5em #081c15;
+}
+
+#total-price span:last-of-type{
+    text-shadow: 2px 2px white;
+    font-size: 1.5em;
+    animation-name: priceScale;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+#total-price span:first-of-type{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+/* Animation of the final price */
+@keyframes priceScale{
+    0%{
+        transform: scale(0.9); 
+    }
+
+    50%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+#confirmation-form{
+    margin: 1em;
+}
+
+#confirmation-msg{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.each-form-field{
+    display: flex;
+    flex-direction: column;
+    margin: 1em; 
+}
+
+/* User email error handling */
+#user-email.error{
+    border: 2px solid red;
+}
+
+#please-enter-email{
+    opacity: 0;
+    font-size: 0.7em;
+}
+
+#please-enter-email.error{
+    display: block;
+    opacity: 1;
+    font-size: 0.9em;
+    color: #c9184a;
+}
+
+/* Final message */
+
+#confirmation-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+#final-message{
+    display: none;
+}
+
+#final-message.final{
+    display: block;
+    top: 0%;
+    right: 1%;
+    margin: 1em;
+    padding: 1em;
+    font-size: 1.3em;
+    box-shadow: 5px 5px 1em black;
+    background-image: linear-gradient(135deg, #48bfe3 25%, #168aad 95%);
+    border-radius: 20px;
+}
+
+#your-details input{
+    text-align: center;
+}
+
+/* Gallery.html page styling */
+#gallery-body{
+    background-image: linear-gradient(135deg, #74c69d 35%, #b7e4c7 45%, #b7e4c7 55%, #34a0a4 65%);
+}
+
+#gallery-block{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#gallery-block h4{
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 90%;
+    background-image: linear-gradient(135deg, #76c893 25%, #34a0a4 65%);
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+}
+
+.gallery{
+    background-image: linear-gradient(135deg, #168aad 25%, #48bfe3 65%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 1em black;
+    width: 90%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery a{
+    border-radius: 20px;
+    width: 45%;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery img{
+    margin: 1em;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0.5em black;
+    transition: all 0.5s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.05);
+}
+
+.gallery img:active{
+    transform: scale(0.95);
+}
+
+
+
+
+/* Atleast Tablet size, going forward*****************************************************************/
+
+@media only screen and (min-width: 650px){
+
+    #welcome-msg{
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+
+    #welcome-msg h2{
+        font-size: 1.5em;
+    }
+
+    #main-pages a{
+        width: 27vw;
+        height: 25vh;
+        padding: 2em;
+        margin-top: 1em;
+        
+    }
+
+    /* Footer */
+
+    .social-media{
+        justify-content: center;
+    }
+
+    .social-media a{
+        width: 30%;
+    }
+    
+    .social-media img{
+        width: 30%;
+        border-radius: 50px;
+    }
+
+    /* Era.html*/
+
+    #all-eras{
+        align-items: center;
+    }
+
+    #all-eras a{
+        width: 50%;
+    }
+
+    #all-eras a:first-of-type{
+        align-self: flex-start;
+    }
+
+    #all-eras a:last-of-type{
+        align-self: flex-end;
+    }
+
+    #goto-from-era li{
+        font-size: 1.2em;
+        margin: 0.7em;
+    }
+
+    /* Era Century body changes with JS */
+
+    .century-body.js #century-header h2{
+        font-size: 2em;
+    }
+    
+    .century-body.js a{
+        width: 50%;
+    }
+
+    /*Characters.html*/
+
+    #goto-from-char li{
+        font-size: 1.2em;
+        margin: 0.7em;
+    }
+    
+    #all-characters a{
+        height: 30%;
+        width: 25%;
+        top: 0%;
+    }
+    
+    #king{
+        left: 15%;
+        transform: rotate(-45deg);
+    }
+
+    #king:hover{
+        transform: translate(-5em, -5em) scale(1.25);
+    }
+    
+    #assassin{
+        left: 25%;
+        transform: rotate(-30deg);
+    }
+
+    #assassin:hover{
+        transform: translate(-5em, -5em) scale(1.25);
+    }
+    
+    #knight{
+        left: 35%;        
+    }
+
+    #knight:hover{
+        transform: translate(-5em, -5em) scale(1.25);
+    }
+    
+    #priest{
+        left: 45%;
+        transform: rotate(30deg);
+    }
+
+    #priest:hover{
+        transform: translate(-3em, -5em) scale(1.25);
+    }
+    
+    #stable{
+        left: 55%;
+        transform: rotate(45deg);
+    }
+
+    #stable:hover{
+        transform: translate(5em, -5em) scale(1.25);
+    }
+
+    /* Activities.html */
+    #all-activities a{
+        width: 50%;
+    }
+   
+
+}
+
+
+/* Atleast Desktop size, going forward*********************************************************************************************/
+
+@media only screen and (min-width: 1000px){
+
+    footer > img{
+        width: 10%;
+    }
+
+    #welcome-msg{
+        font-size: 1.5em;
+    }
+
+    header h1{
+        font-size: 4em;
+    }
+
+    header h4{
+        margin-top: 0em;
+        font-size: 1.5em;
+    }
+
+    header nav{
+        font-size: 1.2em;
+        
+    }
+
+    #main-pages a{
+        width: 25%;
+        height: 25vh;
+        padding: 2em;
+        margin: 2em;
+        
+    }
+
+    #welcome-msg{
+        
+        width: 25%;
+        
+    }
+
+    /* Footer */
+
+    .social-media a{
+        width: 20%;
+    }
+    
+    .social-media img{
+        width: 20%;
+        border-radius: 50px;
+    }
+
+    /* Era.html*/
+
+    #all-eras{
+        align-items: center;
+        font-size: 2em;
+    }
+   
+    #all-eras a{
+        width: 30%;
+    }
+
+    /*Characters.html*/
+    
+    #all-characters a{
+        height: 60%;
+        width: 25%;
+        top: 0%;
+    }
+    
+    #king{
+        left: 15%;
+        transform: rotate(-45deg);
+        color: white;
+    }
+
+    #king:hover{
+        transform: translate(-10em, -10em) scale(1.2);
+    }
+    
+    #assassin{
+        left: 25%;
+        transform: rotate(-30deg);
+        background-position: right;
+    }
+
+    #assassin:hover{
+        transform: translate(-5em, -10em) scale(1.2);
+    }
+    
+    #knight{
+        left: 35%;
+        justify-content: left;
+    }
+
+    #knight:hover{
+        transform: translate(-5em, -10em) scale(1.2);
+    }
+    
+    #priest{
+        left: 45%;
+        transform: rotate(30deg);
+    }
+
+    #priest:hover{
+        transform: translate(-3em, -10em) scale(1.2);
+    }
+    
+    #stable{
+        left: 55%;
+        transform: rotate(45deg);
+    }
+
+    #stable:hover{
+        transform: translate(5em, -10em) scale(1.2);
+    }
+
+    /*Activities.html*/
+
+    #all-activities{
+        border-radius: 20px;
+        margin: 2em;
+    }
+
+    #all-activities a{
+        justify-content: left;
+        margin-top: 5em;
+        height: 30%;
+        width: 25%;
+    }
+    
+    #royal-relax{
+        left: 7%;
+        top: 10%;
+    }
+
+    #royal-relax:hover{
+        transform: translate(-3em, -10em) scale(1.1);
+    }
+    
+    #treasure-hunt{
+        left: 15%;
+        top: 20%;
+    }
+
+    #treasure-hunt:hover{
+        transform: translate(-5em, -15em) scale(1.1);
+    }
+    
+    #wildlife-hunt{
+        left: 30%;
+        top: 15%;
+    }
+
+    #wildlife-hunt:hover{
+        transform: translate(-7em, -10em) scale(1.1);
+    }
+    
+    #jousting{
+        left: 40%;
+        top: 10%;
+        
+    }
+
+    #jousting:hover{
+        transform: translate(-5em, -10em) scale(1.1);
+    }
+    
+    #chariot-racing{
+        left: 55%;
+        top: 20%;
+        
+    }
+
+    #chariot-racing:hover{
+        transform: translate(-10em, -15em) scale(1.1);
+    }
+
+    #assistance{
+        left: 70%;
+        top: 25%;
+        align-items: center;
+    }
+
+    #assistance:hover{
+        transform: translate(-5em, -10em) scale(1.1);
+    }
+
+    /*Others' Experiences.html*/
+
+    #others-experiences h2{
+        width: 80%;
+        font-size: 3em;
+    }
+
+    .review{
+        flex-direction: row;
+        height: 30vh;
+        width: 50%;
+    }
+
+    .review p:first-of-type{
+        align-self: center;
+        height: 30%;
+        border-bottom: 0;
+        border-right: 2px solid black;
+    }
+
+    #others-experiences p{
+        padding: 1em;
+        width: 30%;
+    }
+
+    /*Plany My Trip.html*/
+
+    .selected-items{
+        border-bottom: 3px solid black;
+        
+    }
+
+    .selected-items:last-of-type{
+        border-bottom: 0;
+    }
+
+    .selected-items p{
+        border-bottom: none;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em;
+        font-size: 2em;
+        border-radius: 20px;
+        box-shadow: 5px 5px 0.5em black;
+        background-image: linear-gradient(135deg, #05668d 25%, #00b4d8 65%);
+    }
+
+    .selected-items p::after{
+        content: "\21A0";
+        margin-left: 1em;
+        animation-name: arrow;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+
+    @keyframes arrow{
+        0%{
+            transform: translateX(-0.5em);
+        }
+        50%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(0.5em);
+        }
+    }
+
+    .selected-items ul{
+        width: 50%;
+    }
+
+    .selected-items ul li{
+        list-style: inside;
+        font-size: 1.2em;
+    }
+
+    .selected-items a{
+        width: 30%;
+        transition: all 0.3s ease;
+        margin-bottom: 1em;
+    }
+
+    .selected-items a:hover{
+        transform: scale(1.1);
+    }
+
+    .selected-items a:active{
+        transform: scale(0.9);
+    }
+
+    #book{
+        width: 70%;
+    }
+
+
+    /* Booking.html */
+
+    /* Input form handling */
+    #days-and-people form{
+        margin-top: 5em;
+        margin-left: 10em;
+        margin-right: 10em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .further-details fieldset{
+        width: 80%;
+    }
+
+
+    fieldset {
+        align-self: center;
+        width: 60%;
+    }
+
+    fieldset label{
+        font-size: 1.4em;
+    }
+
+    fieldset input{
+        height: 7vh;
+        width: 70%;
+    }
+
+    #first-button{
+        width: 80%;
+    }
+
+    /* Counting all the items */
+
+    #chosen-items-count{
+        display: flex;
+        justify-content: center;
+    }
+
+    #chosen-items-count ul{
+        width: 50%;
+    }
+
+    #chosen-items-count ul li{
+        font-size: 1.5em;
+    }
+
+    #chosen-items-count ul li span{
+        font-size: 1.3em;
+    }
+
+    #prices-header p{
+        font-size: 1.7em;
+    }
+
+    #prices ul{
+        border-radius: 20px;
+        width: 65%;
+    }
+
+    #prices ul li{
+        font-size: 1.5em;
+    }
+
+    #total-price p{
+        background-image: linear-gradient(135deg, #48bfe3 25%, #5390d9 75%);
+        width: 65%;
+        border-radius: 20px;
+    }
+
+    #total-price span:first-of-type{
+        font-size: 2em;
+    }
+
+    /* Final Confirmation form */
+    #confirmation-form{
+        display: flex;
+        justify-content: center;
+    }
+        
+    /* Final message */
+    
+    #confirmation-form form{
+        margin: 1em;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #your-details{
+        width: 40%;
+    }
+
+    #final-message-box{
+        margin: 1em;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #final-message-box .button-fieldset{
+        width: 70%;
+    }
+
+    /* Gallery.html */
+
+    #gallery-block{
+        margin-top: 2em;
+    }
+
+    #gallery-block h4{
+        margin-top: 2em;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .gallery a{
+        width: 30%;
+        margin-bottom: 2em;
+    }
+
+    .gallery img{
+        box-shadow: 10px 10px 1em black;
+    }
+    
+}
